@@ -35,6 +35,7 @@ def main():
         b64_content = image_to_base64(path)
         print("Waiting for AI response...")
         print("AI Response:", generate_response(sys.argv[2], [b64_content]))
-
+    else:
+        print(f"Please call this script with two arguments: python {sys.argv[0]} \"file.jpg\" \"describe the image\"")
 if __name__ == "__main__":
     main()
